@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buy Product</title>
+    <link rel="stylesheet" href="_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<body>
+<div class="container-fluid">
+    <h2>Product Information</h2>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="container text-justify">
+                <div class="text-center"><img id="prodimg" style="width: 220px; height: 220px;"></div>
+                <span><b><h5>Product Description</h5></b></span>
+                <p id="proddesc"></p>
+                <span><b><h5>Custmer Reviews</h5></b></span>
+                <p id="custrev"></p>
+                <strong><h5>Price</h5><span id="price"></span></strong><br>
+                <br>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>      <!--row containing info-->
+    <!--<div class="row">
+        <div class="col-2"></div>
+        <div class="col-8" id="frm">
+            <br>
+
+            <form data-toggle="validator" role="form">
+
+
+            <div class="form-group row">
+                <label class="col-2">First Name</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" id="custFirstName" placeholder="miller" required>
+                </div>
+            </div>      &lt;!&ndash;First name row&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Last Name</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" id="custLastName" placeholder="alex" required>
+                </div>
+            </div>      &lt;!&ndash;Last Namr row&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">E-mail</label>
+                <div class="col-10">
+                    <input class="form-control" type="email" id="custEmail" required placeholder="alexmiller@gmail.com">
+                </div>
+            </div>      &lt;!&ndash;email id row&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Phone Number</label>
+                <div class="col-10">
+                    <input class="form-control" type="number" id="custNumber" maxlength="10" required
+                           placeholder="999-999-9999">
+                </div>
+            </div>      &lt;!&ndash;phone number row&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Billing Address line 1</label>
+                <div class="col-4">
+                    <input type="text" id="custadd" required class="form-control">
+                </div>
+                <label class="col-2">City</label>
+                <div class="col-4">
+                    <input type="text" id="city" required class="form-control">
+                </div>
+            </div>          &lt;!&ndash;Street and city&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Address line 2</label>
+                <div class="col-4">
+                    <input type="text" id="custad" required class="form-control">
+                </div>
+                <label class="col-2">State</label>
+                <div class="col-4">
+                    <select id="state" class="form-control">
+                        <option value="">Select One</option>
+                        <option value="Alaska">Alaska</option>
+                        <option value="Alabama">Alabama</option>
+                        <option value="Arkansas">Arkansas</option>
+                        <option value="Arizona">Arizona</option>
+                        <option value="California">California</option>
+                        <option value="Colorado">Colorado</option>
+                        <option value="Connecticut">Connecticut</option>
+                        <option value="District of Columbia">District of Columbia</option>
+                        <option value="Delaware">Delaware</option>
+                        <option value="Florida">Florida</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Hawaii">Hawaii</option>
+                        <option value="Iowa">Iowa</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Illinois">Illinois</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Kansas">Kansas</option>
+                        <option value="Kentucky">Kentucky</option>
+                        <option value="Louisiana">Louisiana</option>
+                        <option value="Massachusetts">Massachusetts</option>
+                        <option value="Maryland">Maryland</option>
+                        <option value="Maine">Maine</option>
+                        <option value="Michigan">Michigan</option>
+                        <option value="Minnesota">Minnesota</option>
+                        <option value="Missouri">Missouri</option>
+                        <option value="Mississippi">Mississippi</option>
+                        <option value="Montana">Montana</option>
+                        <option value="North Carolina">North Carolina</option>
+                        <option value="North Dakota">North Dakota</option>
+                        <option value="Nebraska">Nebraska</option>
+                        <option value="New Hampshire">New Hampshire</option>
+                        <option value="New Jersey">New Jersey</option>
+                        <option value="New Mexico">New Mexico</option>
+                        <option value="Nevada">Nevada</option>
+                        <option value="New York">New York</option>
+                        <option value="Ohio">Ohio</option>
+                        <option value="Oklahoma">Oklahoma</option>
+                        <option value="Oregon">Oregon</option>
+                        <option value="Pennsylvania">Pennsylvania</option>
+                        <option value="Puerto Rico">Puerto Rico</option>
+                        <option value="Rhode Island">Rhode Island</option>
+                        <option value="South Carolina">South Carolina</option>
+                        <option value="South Dakota">South Dakota</option>
+                        <option value="Tennessee">Tennessee</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Utah">Utah</option>
+                        <option value="Virginia">Virginia</option>
+                        <option value="Vermont">Vermont</option>
+                        <option value="Washington">Washington</option>
+                        <option value="Wisconsin">Wisconsin</option>
+                        <option value="West Virginia">West Virginia</option>
+                        <option value="Wyoming">Wyoming</option>
+                    </select>
+                </div>
+            </div>&lt;!&ndash;Street2 and state&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Card Holder's Name</label>
+                <div class="col-10">
+                    <input class="form-control" type="text" id="cardHolderName" placeholder="miller alex" required>
+                </div>
+            </div>      &lt;!&ndash;card holder name name row&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Cradit/Dabit card Number</label>
+                <div class="col-4">
+                    <input class="form-control" type="number" id="cardNumber" maxlength="12"
+                           placeholder="4444 4444 4444 4444" required>
+                </div>
+                <label class="col-2">CVV Number</label>
+                <div class="col-4">
+                    <input class="form-control" type="number" id="cvvNumber" placeholder="999" required>
+                </div>
+            </div>      &lt;!&ndash;card num and cvv&ndash;&gt;
+            <div class="form-group row">
+                <label class="col-2">Expire Date</label>
+                <div class="col-4">
+                    <input class="form-control" type="date" id="expdate" required>
+                </div>
+                <label class="col-2">Promo Code</label>
+                <div class="col-4">
+                    <input class="form-control" type="text" id="promoNumber">
+                </div>
+            </div>      &lt;!&ndash;exp date and promo&ndash;&gt;
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <a onclick="getInfo();">
+                    <button class="btn btn-primary form-control" >Buy</button>
+                    </a>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            <br>
+
+            </form>
+
+
+        </div>      &lt;!&ndash;col for form col 8&ndash;&gt;
+    </div>-->      <!--row containing form-->
+
+
+    <form data-toggle="validator" role="form" id="frm">
+        <div class="form-group">
+            <label class="control-label">First Name</label>
+            <input type="text" class="form-control" id="custFirstName" placeholder="Dean" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Last Name</label>
+            <input type="text" class="form-control" id="custLastName" placeholder="Johns" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Email</label>
+            <input type="email" class="form-control" id="custEmail" placeholder="deanjohns@xyz.com" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Phone Number</label>
+            <input type="number" class="form-control" id="custNumber" placeholder="888-888-8888" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Shipping Address</label>
+            <input type="text" class="form-control" id="custadd" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Address Line 2 </label>
+            <input type="text" class="form-control" id="custad" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">City </label>
+            <input type="text" class="form-control" id="city" required>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label">State</label>
+            <select id="state" class="form-control">
+                <option value="">Select One</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="Arizona">Arizona</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="District of Columbia">District of Columbia</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Maine">Maine</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Montana">Montana</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New York">New York</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Washington">Washington</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wyoming">Wyoming</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Card Holder Name </label>
+            <input type="text" class="form-control" id="cardHolderName" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Credit/Debit Card Number</label>
+            <input type="number" class="form-control" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">CVV Number</label>
+            <input type="number" class="form-control" id="cvvNumber" placeholder="xxx" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Expiration Date</label>
+            <input type="date" class="form-control" id="expdate" required>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Promo Code Number</label>
+            <input type="text" class="form-control" id="promoNumber">
+        </div>
+        <div class="form-group">
+
+            <button type="button" onclick="getInfo();" class="btn btn-primary">Submit</button>
+
+        </div>
+    </form>
+
+
+</div>
+<br>
+<script src="_scripts/script.js"></script>
+<script>
+    var query = window.location.search;
+    // Skip the leading ?, which should always be there,
+    // but be careful anyway
+    if (query.substring(0, 1) == '?') {
+        query = query.substring(1);
+    }
+    var data = query.split(',');
+    for (i = 0; (i < data.length); i++) {
+        data[i] = unescape(data[i]);
+    }
+    document.getElementById('prodimg').src = data[0];
+    document.getElementById('proddesc').innerHTML = data[1];
+    document.getElementById('custrev').innerHTML = data[2];
+    document.getElementById('price').innerHTML = data[3];
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="_scripts/bootstrap.min.js"></script>
+
+</body>
+</html>

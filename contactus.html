@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Welcome to Guitar Center</title>
+    <link rel="stylesheet" href="_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<body>
+<nav id="nav-placeholder"></nav>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Welcome to Guitar Center</title>
+    <link rel="stylesheet" href="_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<body>
+<nav id="nav-placeholder"></nav>
+<div class="container-fluid">
+    <div class="row">
+<div class="card" style="width: 20rem;">
+    <img class="card-img-top" src="images/guitar1.jpg" alt="image">
+    <div class="card-block">
+        <h4 class="card-title">Rogue RA-090 Dreadnought Acoustic Guitar</h4>
+        <p class="card-text">This guitar is bla bla bla.</p>
+        <a href="#" class="btn btn-primary">Buy</a>
+    </div>
+</div>
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="images/guitar2.jpg" alt="image">
+        <div class="card-block">
+            <h4 class="card-title">Rogue Starter Acoustic Guitar</h4>
+            <p class="card-text">This guitar is bla bla bla.</p>
+            <a href="#" class="btn btn-primary ">Buy</a>
+        </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="images/guitar3.jpg" alt="image">
+        <div class="card-block">
+            <h4 class="card-title">Fender FA-135CE Cutaway Concert Acoustic-Electric Guitar</h4>
+            <p class="card-text">This guitar is bla bla bla.</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+    </div>
+    <div class="card" style="width: 20rem;">
+        <img class="card-img-top" src="images/guitar4.jpg" alt="image">
+        <div class="card-block">
+            <h4 class="card-title">Gibson 2017 SG Standard T Electric Guitar</h4>
+            <p class="card-text">This guitar is bla bla bla.</p>
+            <a href="#" class="btn btn-primary">Buy</a>
+        </div>
+    </div>
+    </div>
+</div>      <!--Containrt-->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+</script>
+</body>
+</html>

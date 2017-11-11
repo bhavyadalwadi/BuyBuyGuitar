@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<h3 class="text-center">Please Confirm Provided Information</h3>
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col-6">
+        <div id="data">
+            <div class="row">
+                <div class="col-6">
+                    <b>First name:</b>
+                </div>
+                <div class="col-6">
+                    <span id="custFirstName"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Last name:</b>
+                </div>
+                <div class="col-6">
+                    <span id="custLastName"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Email id:</b>
+                </div>
+                <div class="col-6">
+                    <span id="custEmail"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Phone Number:</b>
+                </div>
+                <div class="col-6">
+                    <span id="custNumber"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Primary Address:</b>
+                </div>
+                <div class="col-6">
+                    <span id="custadd"></span>
+                    <span id="custad"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>City:</b>
+                </div>
+                <div class="col-6">
+                    <span id="city"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>State:</b>
+                </div>
+                <div class="col-6">
+                    <span id="state"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Card Holder Name:</b>
+                </div>
+                <div class="col-6">
+                    <span id="cardHolderName"></span><br>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Cardit/Dabit Card Number:</b>
+                </div>
+                <div class="col-6">
+                    <span id="cardNumber"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <b>CVV Number:</b>
+                </div>
+                <div class="col-6">
+                    <span id="cvvNumber"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Expire Date:</b>
+                </div>
+                <div class="col-6">
+                    <span id="expdate"></span><br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-6">
+                    <b>Applied Promo Code is:</b>
+                </div>
+                <div class="col-6">
+                    <span id="promoNumber"></span><br>
+                </div>
+            </div>
+            <a target="_blank" href="confirmation.html"><button id="confirmbtn" class="btn btn-primary">Confirm</button></a>
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>         <!-- row -->
+
+
+<script>
+    var query = window.location.search;
+    // Skip the leading ?, which should always be there,
+    // but be careful anyway
+    if (query.substring(0, 1) == '?') {
+        query = query.substring(1);
+    }
+    var finaldata = query.split(',');
+    for (i = 0; (i < finaldata.length); i++) {
+        finaldata[i] = unescape(finaldata[i]);
+    }
+    document.getElementById('custFirstName').innerHTML = finaldata[0];
+    document.getElementById('custLastName').innerHTML = finaldata[1];
+    document.getElementById('custEmail').innerHTML = finaldata[2];
+    document.getElementById('custNumber').innerHTML = finaldata[3];
+    document.getElementById('custadd').innerHTML = finaldata[4];
+    document.getElementById('custad').innerHTML = finaldata[5];
+    document.getElementById('city').innerHTML = finaldata[6];
+    document.getElementById('state').innerHTML = finaldata[7];
+    document.getElementById('cardHolderName').innerHTML = finaldata[8];
+    document.getElementById('cardNumber').innerHTML = finaldata[9];
+    document.getElementById('cvvNumber').innerHTML = finaldata[10];
+    document.getElementById('expdate').innerHTML = finaldata[11];
+    document.getElementById('promoNumber').innerHTML = finaldata[12];
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+<script src="_scripts/bootstrap.min.js"></script>
+<script src="_scripts/script.js"></script>
+<body>
+
+</body>
+</html>

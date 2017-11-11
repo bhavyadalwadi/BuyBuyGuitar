@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Welcome to Guitar Center</title>
+    <link rel="stylesheet" href="_styles/bootstrap.min.css">
+    <link rel="stylesheet" href="_styles/style.css">
+</head>
+<body>
+<nav id="nav-placeholder"></nav>
+<div class="container">
+    <div class="container-fluid">
+        <h2>Lorem Ipsum</h2>
+        <blockquote style="text-align:center">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+            "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."</blockquote>
+        <hr style="border-top: 3px solid rgb(148, 183, 167);">
+        <div class="row">
+            <div class="col-6"><p><h3>Who are we</h3></p><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.</p> </div>
+            <div class="col-6"><p><h3>What we do</h3></p><p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain.</p></div>
+        </div>  <!--ROW-->
+        <br>
+        <div class="row">
+            <div class="col-4"><hr style="border-top: 3px solid rgb(148, 183, 167);"></div>
+            <div class="col-4"><h3 style="text-align: center">Testimonial from customers </h3></div>
+            <div class="col-4"><hr style="border-top: 3px solid rgb(148, 183, 167);"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <img class="border-0" src="images/user1.jpg" style="width: 50%">
+
+            </div>
+            <div class="col-4">
+                <img class="border-0" src="images/user1.jpg" style="width: 50%">
+            </div>
+            <div class="col-4">
+                <img class="border-0" src="images/user1.jpg" style="width: 50%">
+            </div>
+        </div>      <!-- customer row-->
+    </div>
+
+</div> <!--container-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+    $.get("nav.html", function(data){
+        $("#nav-placeholder").replaceWith(data);
+    });
+</script>
+</body>
+</html>
